@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CriptoList: View {
     @State var criptomonedas: [Criptomoneda] = []
+    @State var isVisibleAlert: Bool = false
+    @State var alertMessage: String = "Ha ocurrido un error"
+    
     var body: some View {
         ZStack{
             VStack(spacing:0){
                 HStack{
                     Spacer()
-                    Text("Criptomonedas")
+                    Text("Mercado")
                     Spacer()
                     Button(action: {
                         getCriptomonedas()
@@ -29,12 +32,18 @@ struct ContentView: View {
                         
                         }
                     }
-                
-                
             }
-            
-                
-            
+            Alert(isVisible: $isVisibleAlert, content: {
+                VStack(alignment: .center, spacing: 8){
+                    Image(systemName: "exclamationmark.circle.fill").foregroundColor(.red)
+                        .font(.system(size: 24))
+                        .padding(.bottom)
+                    Text(alertMessage)
+                    Button("Aceptar", action: {
+                        isVisibleAlert = false
+                    }).padding(.top)
+                }.padding()
+            })
         }.onAppear(){
             getCriptomonedas()
             _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { timer in
@@ -43,19 +52,17 @@ struct ContentView: View {
         }
     }
 }
-extension ContentView{
+extension CriptoList{
     func getCriptomonedas(){
         CriptomonedasService().getCriptomonedas(onSuccess:{ response in
             if response != nil {
                 criptomonedas = response!.data!
             }
-        }, onError: {
-            
+        }, onError: { response in
+            if response != nil {
+                alertMessage = response!
+                isVisibleAlert = true
+            }
         })
-    }
-}
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

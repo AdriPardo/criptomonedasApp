@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		946927FAC91249F5D02A285D /* Pods_PruebaTecnica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1846F9C0E0629AC645C382B /* Pods_PruebaTecnica.framework */; };
 		B0B68AF528E05D0000233B81 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B68AF428E05D0000233B81 /* StringUtil.swift */; };
+		B0C4230F28E2471100A39F8E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4230E28E2471100A39F8E /* Alert.swift */; };
 		B0C51E1A28DA3FAF0076A9B1 /* CriptoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C51E1928DA3FAF0076A9B1 /* CriptoListRow.swift */; };
 		B0F3D19E28D8FB780011C840 /* PruebaTecnicaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3D19D28D8FB780011C840 /* PruebaTecnicaApp.swift */; };
-		B0F3D1A028D8FB780011C840 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3D19F28D8FB780011C840 /* ContentView.swift */; };
+		B0F3D1A028D8FB780011C840 /* CriptoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3D19F28D8FB780011C840 /* CriptoList.swift */; };
 		B0F3D1A228D8FB790011C840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F3D1A128D8FB790011C840 /* Assets.xcassets */; };
 		B0F3D1A528D8FB790011C840 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F3D1A428D8FB790011C840 /* Preview Assets.xcassets */; };
 		B0F3D1AD28D8FFE10011C840 /* CriptomonedasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3D1AC28D8FFE10011C840 /* CriptomonedasService.swift */; };
@@ -20,10 +21,11 @@
 
 /* Begin PBXFileReference section */
 		B0B68AF428E05D0000233B81 /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
+		B0C4230E28E2471100A39F8E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B0C51E1928DA3FAF0076A9B1 /* CriptoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoListRow.swift; sourceTree = "<group>"; };
 		B0F3D19A28D8FB780011C840 /* PruebaTecnica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaTecnica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F3D19D28D8FB780011C840 /* PruebaTecnicaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaTecnicaApp.swift; sourceTree = "<group>"; };
-		B0F3D19F28D8FB780011C840 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B0F3D19F28D8FB780011C840 /* CriptoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoList.swift; sourceTree = "<group>"; };
 		B0F3D1A128D8FB790011C840 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0F3D1A428D8FB790011C840 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B0F3D1AC28D8FFE10011C840 /* CriptomonedasService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptomonedasService.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		B0B68AF128E058FF00233B81 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B0C4230E28E2471100A39F8E /* Alert.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -64,6 +67,7 @@
 		B0B68AF228E0591300233B81 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B0F3D19F28D8FB780011C840 /* CriptoList.swift */,
 				B0C51E1928DA3FAF0076A9B1 /* CriptoListRow.swift */,
 			);
 			path = Views;
@@ -98,16 +102,15 @@
 		B0F3D19C28D8FB780011C840 /* PruebaTecnica */ = {
 			isa = PBXGroup;
 			children = (
-				B0B68AF328E05CE300233B81 /* Utils */,
-				B0B68AF228E0591300233B81 /* Views */,
+				B0F3D1A128D8FB790011C840 /* Assets.xcassets */,
 				B0B68AF128E058FF00233B81 /* Components */,
 				B0F3D1B128D989C00011C840 /* Info.plist */,
 				B0F3D1AE28D901680011C840 /* Models */,
-				B0F3D1AB28D8FFC70011C840 /* Services */,
-				B0F3D19D28D8FB780011C840 /* PruebaTecnicaApp.swift */,
-				B0F3D19F28D8FB780011C840 /* ContentView.swift */,
-				B0F3D1A128D8FB790011C840 /* Assets.xcassets */,
 				B0F3D1A328D8FB790011C840 /* Preview Content */,
+				B0F3D19D28D8FB780011C840 /* PruebaTecnicaApp.swift */,
+				B0F3D1AB28D8FFC70011C840 /* Services */,
+				B0B68AF328E05CE300233B81 /* Utils */,
+				B0B68AF228E0591300233B81 /* Views */,
 			);
 			path = PruebaTecnica;
 			sourceTree = "<group>";
@@ -261,10 +264,11 @@
 			files = (
 				B0F3D1AD28D8FFE10011C840 /* CriptomonedasService.swift in Sources */,
 				B0B68AF528E05D0000233B81 /* StringUtil.swift in Sources */,
-				B0F3D1A028D8FB780011C840 /* ContentView.swift in Sources */,
+				B0F3D1A028D8FB780011C840 /* CriptoList.swift in Sources */,
 				B0F3D1B028D901750011C840 /* Criptomoneda.swift in Sources */,
 				B0C51E1A28DA3FAF0076A9B1 /* CriptoListRow.swift in Sources */,
 				B0F3D19E28D8FB780011C840 /* PruebaTecnicaApp.swift in Sources */,
+				B0C4230F28E2471100A39F8E /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
